@@ -26,14 +26,14 @@
     </style>
 </head>
 <body>
-    <h1>SerialN 43</h1>
+    <h1>Dehumidifier</h1>
     <div id="question"></div>
     <div id="options"></div>
     <button onclick="nextQuestion()">SUBMIT</button>
     <script>
         // Function to clear the quiz score from local storage
 function clearQuizScore() {
-    localStorage.removeItem("SerialN_43_Score");
+    localStorage.removeItem("Dehumidifier");
 }
 
 // Function to clear local storage when the tab is closed or refreshed
@@ -54,7 +54,7 @@ function startTimer() {
         ];
 
         let currentQuestion = 0;
-        let SerialN_43_Score = 0;
+        let Dehumidifier = 0;
 
         // Function to display current question
         function displayQuestion() {
@@ -98,9 +98,9 @@ function startTimer() {
     }
 
     if (!isAnswered || selectedOption !== quiz[currentQuestion].answer) {
-        SerialN_43_Score = 0; // Assign zero score if question is not attempted or answered incorrectly
+        Dehumidifier = 0; // Assign zero score if question is not attempted or answered incorrectly
     } else {
-        SerialN_43_Score++; // Increment score for correct answer
+        Dehumidifier++; // Increment score for correct answer
     }
 }
 
@@ -111,8 +111,8 @@ function startTimer() {
 
             if (currentQuestion === quiz.length) {
                 // All questions answered, store score in local storage
-                localStorage.setItem("SerialN_43_Score", SerialN_43_Score);
-                alert("Quiz completed. Your score is " + SerialN_43_Score);
+                localStorage.setItem("Dehumidifier", Dehumidifier);
+                alert("Quiz completed. Your score is " + Dehumidifier);
             } else {
                 displayQuestion();
             }
